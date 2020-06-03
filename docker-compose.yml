@@ -17,6 +17,8 @@ services:
     build:
       context: .
       dockerfile: titus-ext/runner/Dockerfile.gateway
+    volumes:
+      - ../flag.txt:/flaaaaaag.txt
     networks:
       - titus
     environment:
