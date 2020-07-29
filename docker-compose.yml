@@ -17,12 +17,11 @@ services:
     build:
       context: .
       dockerfile: titus-ext/runner/Dockerfile.gateway
-    volumes:
-      - ../flag.txt:/flaaaaaag.txt
     networks:
       - titus
     environment:
       - TITUS_MASTER_HOST=master
+      - FLAG=flag_here
     ports:
       - 7001:7001
       - 7104:7104
